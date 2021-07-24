@@ -1,0 +1,28 @@
+ALGORITHM algorithm_name
+VAR
+nbc,nbm,nbv,nva, nve, nvi, nvo, nvu, nvy : INTEGER
+BEGIN
+nbc=0;
+ecrire ("Donner la phrase");
+lire(phrase);
+for (i=0, i<n ,i++)
+if ((phrase[i]!=" ") et (phrase[i]!="."))
+nbc++;
+nbm=0;
+for (i=0, i<n,i++)
+if (phrase[i]=" ")
+nbm++;
+nbv=0;
+SWITCH (char) DO
+    case a : if phrase[i]=a, nva++, break;
+    case e : if phrase[i]=e, nve++, break;
+    case i : if phrase[i]=i, nvi++, break;
+    case o : if phrase[i]=o, nvo++, break ;
+    case u : if phrase[i]=u, nvu++, break ;
+    case y : if phrase[i]=y, nvy++, break;
+    default : error;
+END_SWITCH
+nbv=nbv+nva+nve+nvo+nvi+nvu+nvy
+ecrire("le nombre de voyelles est ;" nbv)
+END_WHILE
+END
